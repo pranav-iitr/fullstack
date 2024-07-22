@@ -4,16 +4,16 @@ This repository contains the fullstack assignment for Kuku FM, featuring a Djang
 
 ## Project Structure
 
-│
-├── backend/ # Django backend
-│ ├── manage.py
-│ ├── requirements.txt
-│ └── ... # other Django-related files and directories
-│
-└── frontend/ # Next.js frontend with TypeScript
-├── package.json
-├── tsconfig.json
-└── ... # other Next.js-related files and directories
+│<br>
+├── backend/ # Django backend<br>
+│ ├── manage.py<br>
+│ ├── requirements.txt<br>
+│ └── ... # other Django-related files and directories<br>
+│<br>
+└── frontend/ # Next.js frontend with TypeScript<br>
+├── package.json<br>
+├── tsconfig.json<br>
+└── ... # other Next.js-related files and directories<br>
 
 
 ## Prerequisites
@@ -91,33 +91,35 @@ Ensure you have the following installed on your machine:
 
 ## Database Diagram
 
-+-------------------+ +-------------------+ +---------------------+
-| Author | | Genre | | Audiobook |
-+-------------------+ +-------------------+ +---------------------+
-| - id (PK) | | - id (PK) | | - id (PK) |
-| - name | | - name | | - title |
-+-------------------+ +-------------------+ | - author_id (FK) |
-| - cover_image |
-| - description |
-| - average_rating |
-| - total_reviews |
-| - seo_title |
-| - seo_description |
-| - seo_keywords |
-+---------------------+
-|
-|
-+----------------------+----------------------+
-| |
-+-------------+ +-------------+
-| audiobook_genre | | Author |
-+-------------+ +-------------+
-| - audiobook_id (FK) | | - audiobooks |
-| - genre_id (FK) | +-------------+
-+-------------+
+```plaintext
++-------------------+            +-------------------+           +------------------------+
+|      Author       |            |       Genre       |           |       Audiobook        |
++-------------------+            +-------------------+           +------------------------+
+| - id (PK)         |            | - id (PK)         |           | - id (PK)              |
+| - name            |            | - name            |           | - title                |
++-------------------+            +-------------------+           | - author_id (FK)       |
+                                                                  | - cover_image          |
+                                                                  | - description          |
+                                                                  | - average_rating       |
+                                                                  | - total_reviews        |
+                                                                  | - seo_title            |
+                                                                  | - seo_description      |
+                                                                  | - seo_keywords         |
+                                                                  +------------------------+
+                                                                                 |
+                                                                                 |
++--------------------------------------+                                         |
+|       Audiobook_Genre (Intermediate) |-----------------------------------------+
++--------------------------------------+
+| - id (PK)                            |
+| - audiobook_id (FK)                  |
+| - genre_id (FK)                      |
++--------------------------------------+
+```
 
 ## design insqiration
 https://figma.com/design/3fiyEQRBcfXF08fFYT6h0V/Pixelz-Kit---Bookstore-Web?node-id=210-5622&t=dhY3ce452IYS6JKE-0
 
+## Contac Details
 
 For any questions or suggestions, please contact [pranavleo22@gmail.com](mailto:pranavleo22@gmail.comcom).
