@@ -60,7 +60,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
           {/* Search Bar */}{
             width>768 &&
-          <div className="flex items-center phone:w-0 w-2/3 bg-white border border-[#e6e6e6] rounded-md px-4 py-2">
+          <div className="flex items-center  w-2/3 bg-white border border-[#e6e6e6] rounded-md px-4 py-2">
             <Image
               src="/assets/search.svg"
               alt="Search"
