@@ -1,0 +1,17 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    working_dir: /usr/itx
+    
+    volumes:
+            - ./backend:/usr/itx
+    expose:
+      - 9556
+    ports:
+      - "9556:9556"
+volumes:
+  # static-ui-content:
+  static-ui-content:
