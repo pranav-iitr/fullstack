@@ -21,7 +21,7 @@ class Common(Configuration):
     SECRET_KEY = "random"
 
     # SECURITY WARNING: don't run with debug turned on in production!
-    DEBUG = True
+    DEBUG = False
 
     ALLOWED_HOSTS = ["*"]
 
@@ -74,11 +74,6 @@ class Common(Configuration):
 
     
     
-    
-    UNCERINITY_A = 1
-    UNCERINITY_B = 0.05
-
-    CHAPTER_COMPLETION_LIMIT = 1200
 
     TEMPLATES = [
         {
@@ -142,22 +137,7 @@ class Common(Configuration):
 
     USE_TZ = True
     
-    CELERY_BROKER_URL = "redis://redis:6379"
-    CELERY_RESULT_BACKEND = "redis://redis:6379"
-    CELERY_TASK_TIME_LIMIT = 388,798,500
-
-    CELERY_ACCEPT_CONTENT = ['application/json']
-    CELERY_RESULT_SERIALIZER = 'json'
-    CELERY_TASK_SERIALIZER = 'json'
-    CELERY_TIMEZONE = 'Asia/Kolkata'
-    CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
-    
-    CELERY_BEAT_SCHEDULE = {
-    'update_all_ratings': {
-        'task': 'QBank.tasks.update_all_ratings',
-        'schedule': crontab(hour=00, minute=10), # Run the task daily at midnight
-    },
-}
+   
 
     STATIC_ROOT=os.path.join(BASE_DIR,'static')
     STATIC_URL = "/static/"
